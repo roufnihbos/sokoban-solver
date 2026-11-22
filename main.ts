@@ -1,7 +1,7 @@
 f=require('fs');({MAKEFUN_INPUT_DIR:I,MAKEFUN_OUTPUT_DIR:O}=process.env)
 F=e=>L.replace(/[^#\n]/g,(c,i)=>i-i%W==S-S%W|(i%W>7)*2+(i<S)==k?' $'[+e.includes(c)]:'#')
 for(n of f.readdirSync(I)){
-L=f.readFileSync(I+'/'+n+'/level.txt')+'';W=L.indexOf`\n`+1;S=L.indexOf`@`;o='';for(k=4;k--;){
+L=f.readFileSync(I+'/'+n+'/level.txt')+'';W=L.search`\n`+1;S=L.search`@`;o='';for(k=4;k--;){
 a=[[F('$*'),S,o]];Z=F('.*')
 w:for(;;a=b)for([x,p,q]of(b=[],a)){
 if(x+p==Z+S){o=q;break w}
